@@ -6,12 +6,12 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Submitretro {
-    private static Retrofit getRetrofit(){
+/*  private static void Retrofit getRetrofit(){
         HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();
         httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-        OkHttpClient okHttpClient = new OkHttpClient.Builder().addInterceptor(httpLoggingInterceptor).build();
+        OkHttpClient okHttpClient = new OkHttpClient.Builder().addInterceptor(httpLoggingInterceptor).build();*/
 
-        Retrofit retrofit = new Retrofit().Builder().baseUrl("https://docs.google.com/forms/d/e/").addConverterFactory(GsonConverterFactory.create()).client(okHttpClient).build();
-        return  retrofit;
+//        Retrofit retrofit = new Retrofit().Builder().baseUrl("https://docs.google.com/forms/d/e/").addConverterFactory(GsonConverterFactory.create()).client(okHttpClient).build();
+
     }
-}
+

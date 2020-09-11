@@ -25,8 +25,7 @@ private ProgressBar mpgBar;
 
         getSupportActionBar().hide();
         mpgBar = (ProgressBar) findViewById(R.id.pb_loading);
-        TextView jsonText = (TextView) findViewById(R.id.tv_result);
-        jsonText.setText(mLeadersResult);
+
         try {
             URL skillIqUrl = ApiUtil.buildUrl("api/hours");
             new skillIqQueryTask().execute(skillIqUrl);
@@ -87,6 +86,8 @@ private ProgressBar mpgBar;
             mLeadersResult = "";
                  for(Learningleaders leader: leaders){
                      mLeadersResult = mLeadersResult +leader.name+"\n"+leader.country+"\n"+leader.hours+"\n\n";
+
+                     jsonText.setText(mLeadersResult);
                     }
 
         }
